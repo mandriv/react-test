@@ -39,6 +39,15 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
   process.exit(1);
 }
 
+// Check for required env variables
+const reqEnvVars = ['REACT_APP_PERSIST_KEY'];
+reqEnvVars.forEach((envVar) => {
+  if (!process.env[envVar]) {
+    console.log(`Missing environment variable '${envVar}'!`);
+    process.exit(1);
+  }
+})
+
 // Tools like Cloud9 rely on this.
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
