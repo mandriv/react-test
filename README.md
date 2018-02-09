@@ -9,3 +9,24 @@ Using [create-react-app](https://facebook.github.io/react/blog/2016/07/22/create
 - Add basic ability to edit/add cakes
 
 All code must be tested
+
+## Usage
+Clone and install
+```
+git clone git@github.com:mandriv/react-test.git && cd react-test
+npm install
+```
+Set environment variables
+```
+echo "REACT_APP_PERSIST_KEY='KEY'" >> .env
+```
+Start dev server
+```
+npm start
+```
+
+## Testing
+Use jest
+```
+npm test
+```
